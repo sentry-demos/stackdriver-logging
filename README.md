@@ -4,9 +4,9 @@ This demo covers sending stackdriver logs to Sentry.
 
 The cloud function consumes Stackdriver logs by subscribing to a PubSub topic.
 
-# First Time Setup
+## First Time Setup
 
-## Stackdriver
+### Stackdriver
 
 Create a Stackdriver logging filter - https://cloud.google.com/logging/docs/view/basic-filters
 
@@ -20,7 +20,7 @@ https://cloud.google.com/logging/docs/export/configure_export_v2#dest-create
 
 ![Log Export View](./images/sink-export.png?raw=true)
 
-## Cloud Function
+### Cloud Function
 
 Create a cloud function that is triggered from `Cloud Pub/Sub` and is pulling from the topic you created above.
 
@@ -36,6 +36,6 @@ https://cloud.google.com/functions/docs/calling/pubsub
 
 ![Cloud Function Creation Screen](./images/cloudfunction.png?raw=true)
 
-# Further customization
+## Further customization
 
 The current cloud function is just an example of what you can do. For further functionality, it is recommended that messages themselves be parsed for tags, similar to what [sentlog](https://github.com/getsentry/sentlog) does.
